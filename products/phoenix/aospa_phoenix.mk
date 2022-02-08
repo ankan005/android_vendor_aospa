@@ -15,7 +15,7 @@
 #
 
 # Check for target product
-ifeq (pa_davinci,$(TARGET_PRODUCT))
+ifeq (aospa_phoenix,$(TARGET_PRODUCT))
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -25,9 +25,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/xiaomi/phoenix/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/pa/config/common_full_phone.mk)
+$(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
-PRODUCT_NAME := pa_phoenix
+PRODUCT_NAME := aospa_phoenix
 PRODUCT_DEVICE := phoenix
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi K30
